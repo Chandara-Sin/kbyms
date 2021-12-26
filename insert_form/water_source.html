@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information Manangement System">
+    <meta name="author" content="Chandara Sin">
+    <link rel="icon" sizes="192x192" href="assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <title>Krabuang Yai Information Management System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style_insert_form.css">
+</head>
+
+<body>
+    <div class="container-contact100">
+
+        <div class="wrap-contact100">
+            <form method="#" class="contact100-form">
+
+                <span class="contact100-form-title">
+                    แหล่งน้ำในท้องถิ่น
+                </span>
+
+                <p>ชื่อแหล่งน้ำ</p>
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="water_source_name">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <p>ประเภทของแหล่งน้ำ</p>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="wasur_type" id="wasur_type1">
+                    <label for="spot_type1" class="radio-label">แม่น้ำ</label>
+                    <!-- <span class="focus-input100"></span> -->
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="wasur_type" id="wasur_type2">
+                    <label for="wasur_type2" class="radio-label">ห้วย</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="wasur_type" id="wasur_type3">
+                    <label for="wasur_type3" class="radio-label">หนอง</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="wasur_type" id="wasur_type4">
+                    <label for="wasur_type4" class="radio-label">คลอง</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="wasur_type" id="wasur_type5">
+                    <label for="wasur_type5" class="radio-label">บึง</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="wasur_type" id="wasur_type6">
+                    <label for="wasur_type6" class="radio-label">เขี่อน</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="wasur_type" id="wasur_type7">
+                    <label for="wasur_type7" class="radio-label">อ่างเก็บน้ำ</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="wasur_type" id="wasur_type8">
+                    <label for="wasur_type8" class="radio-label">ฝาย</label>
+                </div>
+
+                <p>อยู่ในหมู่บ้านที่</p>
+                <div class="box">
+                    <div class="select">
+                        <select id="select_village">
+                            <option>หมู่ที่1 บ้านเตย</option>
+                            <option>หมู่ที่2 บ้านกระเบื้องน้อย</option>
+                            <option>หมู่ที่3 บ้านตำแย</option>
+                            <option>หมู่ที่4 บ้านกระเบื้องใหญ่</option>
+                            <option>หมู่ที่5 บ้านไผ่</option>
+                            <option>หมู่ที่6 บ้านโนนกระสัง</option>
+                            <option>หมู่ที่7 บ้านท่ามะเขือ</option>
+                            <option>หมู่ที่8 บ้านวัด</option>
+                            <option>หมู่ที่9 บ้านโนนทอง</option>
+                            <option>หมู่ที่10 บ้านจบก</option>
+                            <option>หมู่ที่11 บ้านโนนเสว</option>
+                        </select>
+                        <div class="select-arrow"></div>
+                    </div>
+                </div>
+
+                <p>ช่วงเวลาที่น้ำแห้ง (ถ้ามี)</p>
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="wasur_drained">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <p>คุณภาพของน้ำ</p>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="watsc_qual" id="watsc_qual1">
+                    <label for="watsc_qual1" class="radio-label">ดีมาก (ใช้อุปโภคบริโภคได้)</label>
+
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="watsc_qual" id="watsc_qual2">
+                    <label for="watsc_qual2" class="radio-label">ปานกลาง (ใช้ทำการประมง/กีฬาทางน้ำได้)</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="watsc_qual" id="watsc_qual3">
+                    <label for="watsc_qual3" class="radio-label">น้อย (ใช้ทำการเกษตร/อุตสาหกรรมได้)</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="watsc_qual" id="watsc_qual4">
+                    <label for="watsc_qual4" class="radio-label">เน่าเสีย (ใช้เฉพาะการคมนาคม)</label>
+                </div>
+
+                <p>ชื่อ-สกุล ผู้ให้ข้อมูล (ถ้ามี)</p>
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="watsc_informer">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn">
+                        บันทึก
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

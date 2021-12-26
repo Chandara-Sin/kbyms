@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="container-finder">
+        <form autocomplete="off">
+            <div class="finder">
+                <div class="finder__outer">
+                    <div class="finder__inner">
+                        <div class="finder__icon" ref="icon"></div>
+                        <input class="finder__input" type="text" name="q" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const input = document.querySelector(".finder__input");
+        const finder = document.querySelector(".finder");
+        const form = document.querySelector("form");
+
+        input.addEventListener("focus", () => {
+            finder.classList.add("active");
+        });
+
+        input.addEventListener("blur", () => {
+            if (input.value.length === 0) {
+                finder.classList.remove("active");
+            }
+        });
+
+        form.addEventListener("submit", (ev) => {
+            ev.preventDefault();
+            finder.classList.add("processing");
+            finder.classList.remove("active");
+            input.disabled = true;
+            setTimeout(() => {
+                finder.classList.remove("processing");
+                input.disabled = false;
+                if (input.value.length > 0) {
+                    finder.classList.add("active");
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+
+</html>

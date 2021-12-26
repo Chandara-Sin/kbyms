@@ -1,0 +1,327 @@
+/* 
+---------------------------------------------
+font & reset css
+--------------------------------------------- 
+*/
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
+@font-face {
+  font-family: "LayijiMahaniyom Bao";
+  src: url("../assets/fonts/LayijiMahaniyom Bao.otf");
+  src: url("../assets/fonts/LayijiMahaniyom Bao.ttf");
+}
+@font-face {
+  font-family: "Itim";
+  src: url("../assets/fonts/Itim-Regular.otf");
+}
+@font-face {
+  font-family: "Lamoon";
+  src: url("../assets/fonts/FC\ Lamoon\ Regular\ ver\ 1.00.otf Lamoon\ Regular\ ver\ 1.00.otf");
+}
+@font-face {
+  font-family: "Maaja";
+  src: url("../assets/fonts/maaja\ ver\ 1.00.otf");
+}
+@font-face {
+  font-family: "FCFriday";
+  src: url("../assets/fonts/FC\ Friday\ Medium.ttf");
+}
+@font-face {
+  font-family: "Salmon";
+  src: url("../assets/fonts/UID\ SALMON\ 2019\ .ttf");
+}
+@font-face {
+  font-family: "FCHome";
+  src: url("../assets/fonts/FC\ Home\ Regular\ ver\ 1.01.ttf");
+}
+@font-face {
+  font-family: "FCMotorway";
+  src: url("../assets/fonts/FC\ Motorway\ Regular.ttf");
+}
+@font-face {
+  font-family: "THKrub";
+  src: url("../assets/fonts/TH\ Krub.ttf");
+}
+@font-face {
+  font-family: "THBaijam";
+  src: url("../assets/fonts/TH\ Baijam.ttf");
+}
+@font-face {
+  font-family: "THKD2";
+  src: url("../assets/fonts/TH\ K2D\ July8.ttf");
+}
+@font-face {
+  font-family: "Kanit";
+  src: url("../assets/fonts/Kanit\ Light.ttf");
+}
+
+/* 
+---------------------------------------------
+header
+--------------------------------------------- 
+*/
+.header-area {
+  position: fixed;
+  top: 1.5rem;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+  height: 100px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.header-area .main-nav {
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+  border-radius: 40px;
+  min-height: 80px;
+  background: #fff;
+}
+
+.header-area .main-nav .nav {
+  justify-content: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  z-index: 999;
+}
+
+.header-area .main-nav .nav li {
+  padding: 1.5rem 6rem 1.5rem 0;
+}
+
+.header-area .main-nav .nav li:last-child {
+  padding-right: 0px;
+}
+
+.header-area .main-nav .nav li a {
+  display: block;
+  font-family: "THKD2","FCFriday","LayijiMahaniyom Bao";
+  font-size: 2.3rem;
+  font-weight: bolder;
+  color: rgb(102, 102, 102);
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  height: 40px;
+  line-height: 40px;
+  border: transparent;
+  letter-spacing: 1px;
+  text-decoration: none !important;
+}
+
+.header-area .main-nav .nav li a:hover {
+  color: #e76f51;
+}
+
+.header-area .main-nav .menu-trigger {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 23px;
+  width: 32px;
+  height: 40px;
+  text-indent: -9999em;
+  z-index: 99;
+  right: 40px;
+  display: none;
+}
+
+.header-area .main-nav .menu-trigger span,
+.header-area .main-nav .menu-trigger span:before,
+.header-area .main-nav .menu-trigger span:after {
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #3B566E;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: 0;
+}
+
+.header-area .main-nav .menu-trigger span:before,
+.header-area .main-nav .menu-trigger span:after {
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background-color: #3B566E;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  left: 0;
+  width: 75%;
+}
+
+.header-area .main-nav .menu-trigger span:before,
+.header-area .main-nav .menu-trigger span:after {
+  content: "";
+}
+
+.header-area .main-nav .menu-trigger span {
+  top: 16px;
+}
+
+.header-area .main-nav .menu-trigger span:before {
+  -moz-transform-origin: 33% 100%;
+  -ms-transform-origin: 33% 100%;
+  -webkit-transform-origin: 33% 100%;
+  transform-origin: 33% 100%;
+  top: -10px;
+  z-index: 10;
+}
+
+.header-area .main-nav .menu-trigger span:after {
+  -moz-transform-origin: 33% 0;
+  -ms-transform-origin: 33% 0;
+  -webkit-transform-origin: 33% 0;
+  transform-origin: 33% 0;
+  top: 10px;
+}
+
+.header-area .main-nav .menu-trigger.active span,
+.header-area .main-nav .menu-trigger.active span:before,
+.header-area .main-nav .menu-trigger.active span:after {
+  background-color: transparent;
+  width: 100%;
+}
+
+.header-area .main-nav .menu-trigger.active span:before {
+  -moz-transform: translateY(6px) translateX(1px) rotate(45deg);
+  -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
+  -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
+  transform: translateY(6px) translateX(1px) rotate(45deg);
+  background-color: #3B566E;
+}
+
+.header-area .main-nav .menu-trigger.active span:after {
+  -moz-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  transform: translateY(-6px) translateX(1px) rotate(-45deg);
+  background-color: #3B566E;
+}
+
+.header-area.header-sticky {
+  min-height: 80px;
+}
+
+.header-area.header-sticky .nav li a {
+  color: #6d6875;
+}
+.header-area.header-sticky .nav li a:after {
+  color: #6d6875;
+  
+}
+
+.header-area.header-sticky .nav li a.active {
+  color: #ee6c4d;
+}
+
+@media (max-width: 1200px) {
+  .header-area .main-nav .nav li {
+    padding: 1.5rem 5rem 1.5rem 0;
+  }
+  .header-area .main-nav:before {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-area {
+    padding: 0px 15px;
+    height: 80px;
+    box-shadow: none;
+    text-align: center;
+  }
+  .header-area .container {
+    padding: 0px;
+  }
+  .header-area .menu-trigger {
+    display: block !important;
+  }
+  .header-area .main-nav {
+    overflow: hidden;
+  }
+  .header-area .main-nav .nav {
+    float: none;
+    width: 100%;
+    margin-top: 80px !important;
+    display: none;
+    -webkit-transition: all 0s ease 0s;
+    -moz-transition: all 0s ease 0s;
+    -o-transition: all 0s ease 0s;
+    transition: all 0s ease 0s;
+    margin-left: 0px;
+  }
+  .header-area .main-nav .nav li:first-child {
+    border-top: 1px solid #eee;
+  }
+  .header-area .main-nav .nav li {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0px;
+  }
+  .header-area .main-nav .nav li a {
+    height: 4rem !important;
+    text-decoration: none !important;
+    line-height: 50px !important;
+    padding: 0.3rem 0rem 0rem 0rem !important;
+    border: none !important;
+    background: #fff !important;
+    color: #3B566E !important;
+  }
+  .header-area .main-nav .nav li a:hover {
+    background: #eee !important;
+  }
+}
+/*Make the underline works*/
+@media (min-width: 992px) {
+  .header-area .main-nav .nav {
+    display: flex !important;
+  }
+  .header-area .main-nav .nav li {
+    margin: 1.5rem 5rem 1.5rem 0;
+    display: table-cell; /*in order to make underline*/
+    position: relative; /*still have no idea what does it do*/
+    padding: 0rem;
+  }
+  
+  .header-area .main-nav .nav li:last-child {
+    margin-right: 0px; /*in order to make it center again*/
+  }
+  
+  
+  /*make the underline thing start from here*/
+  .header-area.header-sticky .nav li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #e67049;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .header-area.header-sticky .nav li a:hover:after {
+    width: 100%; 
+    left: 0; 
+    bottom: auto; /*Make this looks okay*/
+  }
+  
+  .header-area.header-sticky .nav li a.active {
+    color: #ee6c4d;
+  }
+  
+}

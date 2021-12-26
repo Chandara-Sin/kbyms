@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information Manangement System">
+    <meta name="author" content="Chandara Sin">
+    <link rel="icon" sizes="192x192" href="assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <title>Krabuang Yai Information Management System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style_insert_form.css">
+</head>
+
+<body>
+    <div class="container-contact100">
+
+        <div class="wrap-contact100">
+            <form method="#" class="contact100-form">
+
+                <span class="contact100-form-title">
+                    ร้านอาหารในท้องถิ่น
+                </span>
+
+                <p>ชื่อร้านอาหาร</p>
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="res_name">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <p>ประเภทร้านอาหาร</p>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="res_type" id="res_type1">
+                    <label for="res_type1" class="radio-label">ก๋วยเตี๋ยว</label>
+                    <!-- <span class="focus-input100"></span> -->
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="res_type" id="res_type2">
+                    <label for="res_type2" class="radio-label">อาหารตามสั่ง</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="res_type" id="res_type3">
+                    <label for="res_type3" class="radio-label">ปิ่ง/ อย่าง</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="res_type" id="res_type4">
+                    <label for="res_type4" class="radio-label">ชาบู / หม้อไฟ</label>
+                </div>
+
+                <p>อยู่ในหมู่บ้านที่</p>
+                <div class="box">
+                    <div class="select">
+                        <select id="select_village">
+                            <option>หมู่ที่1 บ้านเตย</option>
+                            <option>หมู่ที่2 บ้านกระเบื้องน้อย</option>
+                            <option>หมู่ที่3 บ้านตำแย</option>
+                            <option>หมู่ที่4 บ้านกระเบื้องใหญ่</option>
+                            <option>หมู่ที่5 บ้านไผ่</option>
+                            <option>หมู่ที่6 บ้านโนนกระสัง</option>
+                            <option>หมู่ที่7 บ้านท่ามะเขือ</option>
+                            <option>หมู่ที่8 บ้านวัด</option>
+                            <option>หมู่ที่9 บ้านโนนทอง</option>
+                            <option>หมู่ที่10 บ้านจบก</option>
+                            <option>หมู่ที่11 บ้านโนนเสว</option>
+                        </select>
+                        <div class="select-arrow"></div>
+                      </div>
+                  </div>
+
+                <p>สิ่งอำนวยความสะดวก</p>
+                <div class="checkbox-input">
+                    <input class="#" type="checkbox" name="res_details" id="res_details1">
+                    <label for="res_details1" class="checkbox-label">รับชำระด้วย E-Payment เช่น QR Code</label>
+                    <!-- <span class="focus-input100"></span> -->
+                </div>
+                <div class="checkbox-input">
+                    <input class="#" type="checkbox" name="res_details" id="res_details2">
+                    <label for="res_details2" class="checkbox-label">มีบริการส่ง</label>
+                </div>
+                <div class="checkbox-input">
+                    <input class="#" type="checkbox" name="res_details" id="res_details3">
+                    <label for="res_details3" class="checkbox-label">มีที่จอดรถ</label>
+                </div>
+                <div class="checkbox-input">
+                    <input class="#" type="checkbox" onclick="appear()" name="res_details" id="res_details4">
+                    <label for="res_details4" class="checkbox-label">อื่นๆ</label>
+                </div>
+
+                <div id="other">
+                    <p class="para-other">โปรดระบุ</p>
+                    <div class="wrap-input100 other-div">
+                        <input class="input100" type="text" name="email">
+                        <span class="focus-input100"></span>
+                    </div>
+                </div>
+
+                <p>ช่วงราคาของอาหาร</p>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="res_price" id="res_price1">
+                    <label for="res_price1" class="radio-label">ถูกกว่า 100</label>
+                    <!-- <span class="focus-input100"></span> -->
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="res_price" id="res_price2">
+                    <label for="res_price2" class="radio-label">101-250</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="res_price" id="res_price3">
+                    <label for="res_price3" class="radio-label">251-500</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="res_price" id="res_price4">
+                    <label for="res_price4" class="radio-label">501-1000</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="res_price" id="res_price5">
+                    <label for="res_price5" class="radio-label">มากกว่า 1000</label>
+                </div>
+
+                <p>เบอร์ติดต่อ (ถ้ามี)</p>
+                <div class="wrap-input100">
+                    <input class="input100" type="tel" name="number">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn">
+                        บันทึก
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function appear() {
+            let x = document.getElementById("res_details4") 
+            let w = document.getElementById("other");
+            if(x.checked){
+                w.style.display = "block";
+            }else{
+                w.style.display = "none";
+            }
+            // appear();
+        }
+    </script>
+
+</body>
+
+</html>

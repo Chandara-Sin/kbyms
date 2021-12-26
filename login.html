@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information Manangement System">
+    <meta name="author" content="Chandara Sin">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900" rel="stylesheet">
+    <title>Krabuang Yai Information Management System</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="icon" sizes="192x192" href="assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+</head>
+
+<body>
+    <h2>องค์การบริหารส่วนตำบลกระเบื้องใหญ่</h2>
+    <div class="container" id="container">
+        <!-- Registration -->
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1 class="title">สมัครสมาชิก</h1>
+                <!-- <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div> -->
+                <!-- <span>or use your email for registration</span> -->
+                <input class="textlogin" type="text" placeholder="ชื่อ-นามสกุล" required/>
+                <input class="textlogin" type="password" placeholder="รหัสผ่าน" required/>
+                <input class="textlogin" type="email" placeholder="อีเมล์" required/>
+                <input class="textlogin" type="text" placeholder="เลขบัตรประชาชน" required/>
+                <input class="textlogin" type="text" placeholder="เบอร์โทร" required/>
+                <button>ตกลง</button>
+                <a id="login">เข้าสู่ระบบ</a>
+            </form>
+        </div>
+        <!-- End of Registration -->
+        <!-- Log in -->
+        <div class="form-container sign-in-container">
+            <form action="profile.html">
+                <h1 class="title">เข้าสู่ระบบ</h1>
+                <br>
+                <input class="textlogin" type="email" placeholder="อีเมล์" required />
+                <input class="textlogin" type="password" placeholder="รหัสผ่าน" required />
+
+                <svg class="checkbox-symbol">
+                    <symbol id="check" viewbox="0 0 12 10">
+                        <polyline points="1.5 6 4.5 9 10.5 1" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2"></polyline>
+                    </symbol>
+                </svg>
+
+                <div class="checkbox-container">
+                    <input class="checkbox-input" id="apples" type="checkbox" />
+                    <label class="checkbox" for="apples">
+                        <span>
+                            <svg width="12px" height="10px">
+                                <use xlink:href="#check"></use>
+                            </svg>
+                        </span>
+                        <span>จดจำฉัน</span>
+                    </label>
+
+                </div>
+                <button>เข้าใช้งาน</button>
+                <div class="forgot">
+                    <!-- <a href="#">ลืมรหัสผ่าน?</a>
+                    <br> -->
+                    <a class="close" id="regis" href="#">สมัครสมาชิก?</a>
+                </div>
+            </form>
+        </div>
+        <!-- End of Log in -->
+
+        <!-- Registration -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>ยินดีต้อนรับ</h1>
+                    <p class="message">การสมัครใช้งานเราถือว่าคุณ<br><br>ยอมรับ ข้อกำหนดและสิทธิ<br><br>เงื่อนไข ของระบบแล้ว</p>
+                    <button class="ghost" id="signIn">เข้าสู่ระบบ</button>
+                </div>
+                
+                <div class="overlay-panel overlay-right">
+                    <h1>ยินดีต้อนรับ</h1>
+                    <p class="message">หากยังไม่ได้เป็นสมาชิก<br><br>คลิกเพื่อสมัครสมาชิก</p>
+                    <button class="ghost" id="signUp">สมัคร</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+        const regis = document.getElementById('regis');
+        const login = document.getElementById('login');
+
+        regis.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+
+        login.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+    </script>
+</body>
+
+</html>

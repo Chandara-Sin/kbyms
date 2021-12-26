@@ -1,0 +1,616 @@
+/* ============Thai Fonts============ */
+@font-face {
+  font-family: "LayijiMahaniyom Bao";
+  src: url("../fonts/LayijiMahaniyom Bao.otf");
+  src: url("../fonts/LayijiMahaniyom Bao.ttf");
+}
+@font-face {
+  font-family: "Itim";
+  src: url("../fonts/Itim-Regular.otf");
+}
+@font-face {
+  font-family: "Lamoon";
+  src: url("../fonts/FC\ Lamoon\ Regular\ ver\ 1.00.otf");
+}
+@font-face {
+  font-family: "Maaja";
+  src: url("../fonts/maaja\ ver\ 1.00.otf");
+}
+@font-face {
+  font-family: "FCFriday";
+  src: url("../fonts/FC\ Friday\ Medium.ttf");
+}
+@font-face {
+  font-family: "Salmon";
+  src: url("../fonts/UID\ SALMON\ 2019\ .ttf");
+}
+@font-face {
+  font-family: "FCHome";
+  src: url("../fonts/FC\ Home\ Regular\ ver\ 1.01.ttf");
+}
+@font-face {
+  font-family: "FCMotorway";
+  src: url("../fonts/FC\ Motorway\ Regular.ttf");
+}
+@font-face {
+  font-family: "THKrub";
+  src: url("../fonts/TH\ Krub.ttf");
+}
+@font-face {
+  font-family: "THBaijam";
+  src: url("../fonts/TH\ Baijam.ttf");
+}
+@font-face {
+  font-family: "THKD2";
+  src: url("../fonts/TH\ K2D\ July8.ttf");
+}
+@font-face {
+  font-family: "Kanit";
+  src: url("../fonts/Kanit\ Light.ttf");
+}
+
+/* ============THEMING============ */
+:root {
+  --neutral-900: #09101B;
+  --neutral-800: #131E2F;
+  --neutral-700: rgba(10, 18, 31, 0.64);
+  --neutral-600: rgba(10, 18, 31, 0.04);
+  --neutral-400: rgba(255, 255, 255, 0.08);
+  --neutral-300: rgba(255, 255, 255, 0.64);
+  --neutral-200: #F6F6F9;
+  --neutral-100: #FFFFFF;
+  --neutral-input-light: rgba(10, 18, 31, 0.24);
+  --neutral-input-dark: rgba(255, 255, 255, 0.24);
+  --brand-default-gradient: linear-gradient(109.09deg, #5547FF 0%, #7A70FF 100%);
+  --brand-default-color: #5447FF;
+  --brand-1-gradient: linear-gradient(289.09deg, #FF476D 0%, #FBB861 100%);
+  --brand-1-color: #FF476D;
+  --brand-2-gradient: linear-gradient(109.09deg, #08E5EA 0%, #09DC72 100%);
+  --brand-2-color: #09DC72;
+  --brand-3-gradient: linear-gradient(135deg, #70F7F1 0%, #47BDFF 100%);
+  --brand-3-color: #47BDFF;
+  --brand-4-gradient: linear-gradient(135deg, #8EC5FC 0%, #C047FF 100%);
+  --brand-4-color: #C047FF;
+  --shadow-primary: inset 0px 2px 4px rgba(255, 255, 255, 0.24), inset 0px -2px 4px rgba(0, 0, 0, 0.24);
+  --shadow-primary-elevated: 0px 4px 16px 8px rgba(0, 0, 0, 0.08), inset 0px 2px 4px rgba(255, 255, 255, 0.24), inset 0px -2px 4px rgba(0, 0, 0, 0.24);
+  --shadow-primary-elevated-space: 0px 0px 16px 8px rgba(110, 99, 255, 0.4), inset 0px 2px 4px rgba(255, 255, 255, 0.24), inset 0px -2px 4px rgba(0, 0, 0, 0.24);
+  --shadow-inset: inset 0px 2px 2px rgba(10, 18, 31, 0.04);
+  --shadow-floating: 0px 32px 40px rgba(23, 20, 51, 0.16);
+  --shadow-search: 0px 4px 16px rgba(0, 0, 0, 0.08);
+  
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  font-family: "Poppins", sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+}
+.pfl-wrapper {
+  display: block;
+  width: auto;
+  height: 100%;
+  padding: 40px;
+  margin: 50px;
+  /* background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%); */
+  /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+  overflow: auto;
+}
+#nav {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  right: 50px;
+  width: auto;
+  height: auto;
+}
+#nav:hover .nav-icon span {
+  width: 100%;
+}
+#nav:hover .nav-icon span:before,
+#nav:hover .nav-icon span:after {
+  width: 100%;
+  transition: all 0.25s;
+}
+#nav .nav-icon {
+  display: block;
+  width: 30px;
+  height: 17px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+#nav .nav-icon:after {
+  display: inline-block;
+  width: max-content;
+  content: "หน้าหลัก";
+  padding-left: 45px;
+  line-height: 1rem;
+  font-family: "THKD2", "FCFriday", "LayijiMahaniyom Bao";
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(71, 71, 71);
+}
+#nav .nav-icon span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+}
+#nav .nav-icon span:before,
+#nav .nav-icon span:after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.25s;
+}
+#nav .nav-icon span:before {
+  margin-top: 7px;
+  width: 80%;
+}
+#nav .nav-icon span:after {
+  margin-top: 5px;
+  width: 60%;
+}
+#nav .hire-me {
+  display: block;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  /* padding-right: 10px; */
+}
+#nav .hire-me img {
+  position: block;
+  float: right;
+  width: 3rem;
+  height: auto;
+  background-color: #e07a5f;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  padding: 0.5rem 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+#nav .hire-me:hover img {
+  transform: translateX(8px);
+}
+
+/* #nav .hire-me:after {
+  display: block;
+  content: "";
+  width: 15px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+} */
+article {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 50px 0;
+  overflow: auto;
+}
+article .profile-photo {
+  display: block;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto;
+  background-image: url("../images/user.png");
+  background-size: 80%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+article .profile-info {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+article .profile-info h1 {
+  font-family: "THKD2","Lamoon", "FCFriday", "LayijiMahaniyom Bao";
+  font-size: 2.3em;
+  font-weight: 600;
+  margin-top: 0.5em;
+}
+article .profile-info p {
+  font-family: "Lamoon", "FCFriday", "LayijiMahaniyom Bao","THKD2";
+  font-size: 1.6rem;
+}
+
+article .profile-info div.line {
+  content: "";
+  width: 7rem;
+  height: 1px;
+  background: #283d50;
+  margin: 0 auto;
+}
+article .people,
+article .posts {
+  display: block;
+  width: 100%;
+  margin: 60px 0 0;
+  float: left;
+}
+@media (max-width: 600px) {
+  article .posts {
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 992px) {
+  article .posts {
+    margin-top: 7rem;
+  }
+}
+@media (min-width: 1200px) {
+  article .posts {
+    margin-top: 9.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  article .posts {
+    margin-top: 13rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 767px) {
+  article .posts {
+    margin-top: 1rem;
+  }
+}
+article .people .round-tile {
+  display: block;
+  float: left;
+  margin-bottom: 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+article .people .round-tile:hover {
+  text-decoration: none;
+  /* transition: all 0.3s ease-in-out; */
+}
+article .people .round-tile:hover .roundal {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1,1.1);
+}
+
+article .people .round-tile:hover h4 {
+  color: #e76f51;
+  transition: color 0.3s;
+  text-decoration: none;
+}
+article .people .round-tile .roundal {
+  display: block;
+  margin: 0 auto 10px;
+  width: 90px;
+  height: 90px;
+  background-color: rgb(80, 80, 80);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+/*the same class so no space when styling them*/
+article .people .round-tile .roundal.insert {
+  background-color: #00b4d8;
+  background-image: url("../images/download.png");
+  background-size: 65% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+article .people .round-tile:hover .roundal.insert {
+  /* background-size: 75% auto; */
+  transform: translateY(8px);
+}
+
+article .people .round-tile .roundal.search {
+  background-color: #f9844a;
+  background-image: url("../images/search.png");
+  background-size: 95% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+article .people .round-tile .roundal.report {
+  background-color: #61a5c2;
+  position: relative;
+  overflow: hidden;
+}
+article .people .round-tile .roundal.report .icon i {
+  font-size: 3rem;
+  position: absolute;
+  top: 1.2rem;
+  left: 1.1rem;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+article .people .round-tile:hover .roundal.report{
+  transform:unset;
+}
+
+article .people .round-tile:hover .roundal.report .icon i {
+  transform: scale(1.1,1.1);
+  transition: all 0.3s ease-in-out;
+}
+/*Treat icon as a font, Don't forget*/
+/* article .people .round-tile .roundal.report:before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/report.png");
+  background-size: 50% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+} */
+article .people .round-tile h4 {
+  font-family: "THKD2","Lamoon", "FCFriday", "LayijiMahaniyom Bao";
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(85, 85, 85);
+  transition: color 0.25s;
+  text-decoration: none;
+}
+article .posts .tile {
+  display: block;
+  float: left;
+  margin-bottom: 30px;
+}
+article .posts .tile:nth-of-type(2n + 1) {
+  clear: both;
+}
+article .posts .tile .inner {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  background-color: #5fa8d3;
+  cursor: pointer;
+  transition: box-shadow 0.25s;
+  border-bottom: 3px solid #3a7ca5!important;
+  overflow: hidden;
+}
+.link{
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index: 5;
+}
+/* article .posts .tile .inner img {
+  width: 100%;
+  height: auto;
+} */
+article .posts .tile .inner h4 {
+  font-size: 2.3rem;
+  color: #fff;
+  /* line-height: 2em; */
+  padding: 15px 0rem 0px;
+  text-align: center;
+  transition: color 0.25s;
+  font-family: "LayijiMahaniyom Bao", "THKD2", "FCFriday", "Itim";
+  font-weight: 600;
+}
+
+article .posts .tile .inner:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.25s;
+  background-color: #0096c7;
+  border-bottom: 3px solid #3a7ca5 !important;
+}
+article .posts .tile .inner:hover h4 {
+  /* color: #e67049; */
+  transition: color 0.25s;
+  
+}
+@media (min-width: 992px) {
+  article .people .round-tile:nth-of-type(2) {
+    transform: translateY(80px) translateX(-20%);
+  }
+  article .people .round-tile:nth-of-type(3) {
+    transform: translateY(20px);
+  }
+}
+@media (min-width: 1200px) {
+  article .people .round-tile:nth-of-type(2) {
+    transform: translateY(80px) translateX(-40%);
+  }
+}
+@media (min-width: 1400px) {
+  article .people .round-tile:nth-of-type(2) {
+    transform: translateY(80px) translateX(-50%);
+  }
+}
+@media (max-width: 480px) {
+  .pfl-wrapper {
+    margin: 30px;
+    padding: 40px 0 0;
+  }
+  article .profile-info {
+    padding: 0 30px;
+  }
+  #nav .nav-icon {
+    top: 10px;
+    left: 10px;
+  }
+  #nav .hire-me {
+    top: 5px;
+    right: 10px;
+  }
+}
+
+  /* Fade-move Animation For Lightbox - Magnific Popup */
+/* at start */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+  opacity: 0;
+  transition: all 0.2s ease-out;
+  -webkit-transform: translateY(-1.25rem) perspective(37.5rem) rotateX(10deg);
+  -ms-transform: translateY(-1.25rem) perspective(37.5rem) rotateX(10deg);
+  transform: translateY(-1.25rem) perspective(37.5rem) rotateX(10deg);
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+  -webkit-transform: translateY(0) perspective(37.5rem) rotateX(0);
+  -ms-transform: translateY(0) perspective(37.5rem) rotateX(0);
+  transform: translateY(0) perspective(37.5rem) rotateX(0);
+}
+
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+  opacity: 0;
+  -webkit-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg);
+  -ms-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg);
+  transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg);
+}
+
+/* dark overlay, start state */
+.my-mfp-slide-bottom.mfp-bg {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+/* animate in */
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+/* animate out */
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/**********************************/
+/*     09. Details Lightboxes     */
+/**********************************/
+.lightbox-basic {
+  margin: 2.5rem auto;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  border-radius: 2.5rem;
+  background: #fff;
+  text-align: left;
+  
+}
+
+.lightbox-basic h3 {
+  margin-bottom: 0.5rem;
+}
+.suffix {
+  font-family: "THKD2","Lamoon","LayijiMahaniyom Bao","Itim";
+  font-size: 1.5rem;
+  /* padding-bottom: 1rem; */
+  color: #131e2f;
+}
+
+.prefix {
+  font-family: "THKD2","Lamoon","LayijiMahaniyom Bao","Itim";
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  color: #131e2f;
+  font-weight: 500;
+}
+
+
+.lightbox-basic hr {
+  width: 8rem;
+  height: 0.125rem;
+  margin-top: 1rem;
+  /* margin-bottom: 1.25rem; */
+  margin-left: 0;
+  border: 0;
+  background-color: #e07a5f;
+  text-align: left;
+}
+/* Signup Button */
+.lightbox-basic .btn-solid-reg.mfp-close {
+  position: relative;
+  width: auto;
+  height: auto;
+  color: #fff;
+  opacity: 1;
+}
+
+.lightbox-basic .btn-solid-reg.mfp-close:hover {
+  color: #00bfd8;
+}
+/* end of signup Button */
+
+/* Back Button */
+.lightbox-basic a.mfp-close.as-button {
+  position: relative;
+  width: auto;
+  height: auto;
+  margin-left: 0.375rem;
+  color: #00bfd8;
+  opacity: 1;
+}
+
+.lightbox-basic a.mfp-close.as-button:hover {
+  color: #fff;
+}
+/* end of back button */
+
+.lightbox-basic button.mfp-close.x-button {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  width: 3rem;
+  height: 3rem;
+  color: var(--neutral-800);
+  background-color: #bcb8b1;
+  border-radius: 2rem;
+}
+
+/* Details Lightboxes */
+.lightbox-basic {
+  max-width: 62.5rem;
+  padding: 2.5rem 2.5rem 2.5rem 2.5rem;
+}
+
+/* .lightbox-basic .image-container {
+  max-width: 100%;
+  margin-right: 2rem;
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+} */
+
+.lightbox-basic h3 {
+  margin-top: 0.5rem;
+}
+
+.btn-solid-reg {
+	display: inline-block;
+	border-radius: 2rem;
+	background-color: #e07a5f;
+	color: #fff;
+	font-family:  "THKD2", "Lamoon","Itim";
+  font-size: 1.7rem;
+	transition: all 0.2s;
+  padding: 0.5rem 2.5rem;
+}
+
+.btn-solid-reg:hover{
+  color: #fff;
+  background-color: #ee6c4d;
+  transform: scale(1.1,1.1);
+  text-decoration: none;
+}

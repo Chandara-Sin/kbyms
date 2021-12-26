@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information Manangement System">
+    <meta name="author" content="Chandara Sin">
+    <link rel="icon" sizes="192x192" href="assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <title>Krabuang Yai Information Management System</title>
+    
+
+    <!-- CSS/JS -->
+    <link rel="stylesheet" href="assets/css/profile.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+</head>
+
+<body>
+    <div class="pfl-wrapper">
+        <nav id="nav">
+            <div class="nav-icon"><span></span></div>
+            <a href="login.html">
+                <div class="hire-me"><img src="assets/images/logout.png" alt=""></div>
+            </a>
+        </nav>
+        <article>
+            <div class="profile-photo"></div>
+            <div class="profile-info">
+                <h1>มนัสนันท์ วิเศษนอก </h1>
+                <p>manatsananwi19@gmail.com</p>
+                <div class="line"></div>
+            </div>
+            <div class="col-xs-12">
+                <div class="col-md-6 people">
+                    <a href="insert.html" class="col-xs-12 col-lg-6 round-tile">
+                        <div class="roundal insert"></div>
+                        <h4>เพิ่มข้อมูล</h4>
+                    </a>
+                    <a href="search.html" class="col-xs-12 col-lg-6 round-tile martop">
+                        <div class="roundal search"></div>
+                        <h4>ค้นหา</h4>
+                    </a>
+                    <a href="reports.html" class="col-xs-12 col-lg-6 round-tile">
+                        <div class="roundal report">
+                            <div class="icon"><i class="fa fa-bar-chart"></i></div>
+                        </div>
+                        <h4>รายงาน</h4>
+                    </a>
+
+                </div>
+                <div class="col-md-6 posts">
+                    <div class="col-xs-12 col-lg-12 col-xl-6 tile">
+                        <div class="inner">
+                            <a class="link popup-with-move-anim" id="auto_click" href="#details-lightbox-1"></a>
+                            <h4>ประวัติส่วนตัว</h4>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-lg-12 col-xl-6 tile">
+                        <div class="inner">
+                            <a class="link" href="user-manual.pdf"></a>
+                            <h4>คู่มือการใช้งาน</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+    <!-- Details Lightbox 1 -->
+    <div id="details-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="container">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8" id="exit">
+                    <p class="suffix"> <span class="prefix">ชื่อ-นามสกุล : </span>มนัสนันท์ วิเศษนอก</p>
+                    <p class="suffix"> <span class="prefix">อีเมล์ : </span>manatsananwi19@gmail.com</p>
+                    <p class="suffix"> <span class="prefix">เบอร์โทร : </span>096 647 4832</p>
+                    <p class="suffix"> <span class="prefix">บัตรประชาชน : </span>4178971974987</p>
+                    <hr>
+                    <a class="btn-solid-reg" href="profile_edit.html">แก้ไข</a> 
+                </div>
+            </div><!-- end of col -->
+        </div> <!-- end of container -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of details lightbox 1 -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.js"></script>
+    <script>
+        //Pop up thing
+        if ($('#exist').contents().length > 0) {
+            $(document).ready(function () {
+                $('#auto_click').trigger('click');
+            });
+        }
+
+        /* Lightbox - Magnific Popup */
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+            fixedContentPos: false, /* keep it false to avoid html tag shift with margin-right: 17px */
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    </script>
+</body>
+
+</html>

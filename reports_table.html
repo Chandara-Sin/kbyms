@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Information Manangement System">
+    <meta name="author" content="Chandara Sin">
+    <title>Krabuang Yai Information Management System</title>
+    <link rel="icon" sizes="192x192" href="../assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/css/materialdesignicons.min.css">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/css/style_reports.css">
+    <!-- endinject -->
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:../../partials/_navbar.html -->
+        <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+                <div class="me-3 ">
+                    <button class="navbar-toggler navbar-toggler align-self-center .align-content-center" type="button"
+                        data-bs-toggle="minimize">
+                        <span class="mdi mdi-menu"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="navbar-menu-wrapper d-flex align-items-top">
+                <ul class="navbar-nav">
+                    <li class="nav-item font-weight-semibold d-lg-block ms-0">
+                        <h1 class="welcome-text" id="show-text"><span
+                                class=" fw-bold">องค์การบริหารส่วนตำบลกระเบื้องใหญ่</span></h1>
+                        <!-- <h3 class="welcome-sub-text" id="show-sub-text">รายงานเบื้องต้นต่างๆในแต่ละหมู่บ้าน</h3> -->
+                    </li>
+                </ul>
+
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+                    data-bs-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+
+            <!-- partial -->
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">
+                            <i class="menu-icon mdi mdi-account-circle-outline"></i>
+                            <span class="menu-title">หน้าหลัก</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="insert.html">
+                            <i class="menu-icon mdi mdi-download"></i>
+                            <span class="menu-title">เพิ่มข้อมูล</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">
+                            <i class="menu-icon mdi mdi-file-document-box-search-outline"></i>
+                            <span class="menu-title">ค้นหา</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false"
+                            aria-controls="charts">
+                            <i class="menu-icon mdi mdi-chart-bar"></i>
+                            <span class="menu-title">รายงานเบื้องต้น</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <div class="collapse" id="charts">
+                            <ul class="nav flex-column sub-menu">
+                                <li class="nav-item"> <a class="nav-link"
+                                        href="reports_table.html">เกษตรกรในท้องถิ่น</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#">ร้านอาหารท้องถิ่น</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#">แหล่งท่องเที่ยว</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#">ที่พัก / โฮมสเตย์</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#">อาหารขึ้นชื่อ</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#">พืชในท้องถิ่น</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#">สัตว์ในท้องถิ่น</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#">ภูมิปัญญาท้องถิ่น</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#">แหล่งน้ำในท้องถิ่น</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <!-- <div class="row"> -->
+                    <div class="row mb-3 col-lg-10 col-md-12 col-sm-12 col-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-4">
+                            <form action="" method="GET">
+                                <div class="sample ten">
+                                    <input type="text" name="search_type" placeholder="ค้นหา" class="search-input">
+                                    <input type="hidden" name="category" value="#">
+                                    <button type="submit" class="search-btn btn btn-search">
+                                        <i class="search-icon mdi mdi-magnify"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-8 pe-0">
+                            <a href="reports_table.html" class="btn part-text btn-outline-reddit float-end"><i
+                                    class="part-menu mdi mdi-file-table"></i>ตาราง</a>
+                            <a href="reports.html" class="btn part-text btn-outline-reddit float-end me-3"><i
+                                    class="part-menu mdi mdi-chart-bar"></i>กราฟ</a>
+                        </div>
+                    </div>
+
+                    <!-- Farmer Reports -->
+                    <div class="col-lg-10 grid-margin stretch-card" >
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h4 class="card-title mb-2">เกษตรกรในท้องถิ่น</h4>
+                                        <h4 class="card-title mb-3">ณ วันที่ </h4>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="#" class="btn-outline-download float-end " id="dropdownMenuButton2"
+                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                            <a class="dropdown-item" href="#">Excel</a>
+                                            <a class="dropdown-item" href="#">PDF</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <p class="card-description">
+                                        Add class <code>.table-bordered</code>
+                                    </p> -->
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover" id="export_excel">
+                                        <caption class="card-title mb-0">จำนวนเกษตรกรทั้งหมด : 3 คน </caption>
+                                        <thead>
+                                            <tr>
+                                                <th>ลำดับ</th>
+                                                <th>ชื่อ-นานสกุลเกษตรกร</th>
+                                                <th>ประเภทของการเกษตร</th>
+                                                <th>ที่อยู่</th>
+                                                <th>รายการที่ทำการเกษตร</th>
+                                                <th>ใช้ระบบ หรือเทคโนโลยีทุ่นแรง</th>
+                                                <th>พื้นที่ในการทำการเกษตร (ไร่)</th>
+                                                <th>รายได้เฉลี่ยต่อปี (บาท)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>กิตติธนปกรณ์ กรองทอง</td>
+                                                <td>ปลูกพืช</td>
+                                                <td>หมู่ที่1 บ้านเตย</td>
+                                                <td>ข้าว กล้วย ปลา</td>
+                                                <td>รถไถนา</td>
+                                                <td>3 ไร่</td>
+                                                <td>2183782 บาท</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>กิตติธนปกรณ์ กรองทอง</td>
+                                                <td>ปลูกพืช</td>
+                                                <td>หมู่ที่1 บ้านเตย</td>
+                                                <td>ข้าว กล้วย ปลา</td>
+                                                <td>รถไถนา</td>
+                                                <td>3 ไร่</td>
+                                                <td>2183782 บาท</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>กิตติธนปกรณ์ กรองทอง</td>
+                                                <td>ปลูกพืช</td>
+                                                <td>หมู่ที่1 บ้านเตย</td>
+                                                <td>ข้าว กล้วย ปลา</td>
+                                                <td>รถไถนา</td>
+                                                <td>3 ไร่</td>
+                                                <td>2183782 บาท</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Table -->
+                    <!-- </div> row -->
+
+                </div>
+
+            </div>
+            <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="assets/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="assets/js/Chart.min.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- inject:js -->
+    <script src="assets/js/off-canvas.js"></script>
+    <script src="assets/js/template.js"></script>
+
+    <!-- endinject -->
+</body>
+
+</html>

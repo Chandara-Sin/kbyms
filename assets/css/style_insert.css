@@ -1,0 +1,211 @@
+/* ============Thai Fonts============ */
+@font-face {
+  font-family: "LayijiMahaniyom Bao";
+  src: url("../fonts/LayijiMahaniyom Bao.otf");
+  src: url("../fonts/LayijiMahaniyom Bao.ttf");
+}
+@font-face {
+  font-family: "Itim";
+  src: url("../fonts/Itim-Regular.otf");
+}
+@font-face {
+  font-family: "Lamoon";
+  src: url("../fonts/FC\ Lamoon\ Regular\ ver\ 1.00.otf");
+}
+@font-face {
+  font-family: "Maaja";
+  src: url("../fonts/maaja\ ver\ 1.00.otf");
+}
+@font-face {
+  font-family: "FCFriday";
+  src: url("../fonts/FC\ Friday\ Medium.ttf");
+}
+@font-face {
+  font-family: "Salmon";
+  src: url("../fonts/UID\ SALMON\ 2019\ .ttf");
+}
+@font-face {
+  font-family: "FCHome";
+  src: url("../fonts/FC\ Home\ Regular\ ver\ 1.01.ttf");
+}
+@font-face {
+  font-family: "FCMotorway";
+  src: url("../fonts/FC\ Motorway\ Regular.ttf");
+}
+@font-face {
+  font-family: "THKrub";
+  src: url("../fonts/TH\ Krub.ttf");
+}
+@font-face {
+  font-family: "THBaijam";
+  src: url("../fonts/TH\ Baijam.ttf");
+}
+@font-face {
+  font-family: "THKD2";
+  src: url("../fonts/TH\ K2D\ July8.ttf");
+}
+@font-face {
+  font-family: "Kanit";
+  src: url("../fonts/Kanit\ Light.ttf");
+}
+  
+/* ============THEMING============ */
+:root {
+  --neutral-900: #09101B;
+  --neutral-800: #131E2F;
+  --neutral-700: rgba(10, 18, 31, 0.64);
+  --neutral-600: rgba(10, 18, 31, 0.04);
+  --neutral-400: rgba(255, 255, 255, 0.08);
+  --neutral-300: rgba(255, 255, 255, 0.64);
+  --neutral-200: #F6F6F9;
+  --neutral-100: #FFFFFF;
+  --neutral-input-light: rgba(10, 18, 31, 0.24);
+  --neutral-input-dark: rgba(255, 255, 255, 0.24);
+  --brand-default-gradient: linear-gradient(109.09deg, #5547FF 0%, #7A70FF 100%);
+  --brand-default-color: #5447FF;
+  --brand-1-gradient: linear-gradient(289.09deg, #FF476D 0%, #FBB861 100%);
+  --brand-1-color: #FF476D;
+  --brand-2-gradient: linear-gradient(109.09deg, #08E5EA 0%, #09DC72 100%);
+  --brand-2-color: #09DC72;
+  --brand-3-gradient: linear-gradient(135deg, #70F7F1 0%, #47BDFF 100%);
+  --brand-3-color: #47BDFF;
+  --brand-4-gradient: linear-gradient(135deg, #8EC5FC 0%, #C047FF 100%);
+  --brand-4-color: #C047FF;
+  --shadow-primary: inset 0px 2px 4px rgba(255, 255, 255, 0.24), inset 0px -2px 4px rgba(0, 0, 0, 0.24);
+  --shadow-primary-elevated: 0px 4px 16px 8px rgba(0, 0, 0, 0.08), inset 0px 2px 4px rgba(255, 255, 255, 0.24), inset 0px -2px 4px rgba(0, 0, 0, 0.24);
+  --shadow-primary-elevated-space: 0px 0px 16px 8px rgba(110, 99, 255, 0.4), inset 0px 2px 4px rgba(255, 255, 255, 0.24), inset 0px -2px 4px rgba(0, 0, 0, 0.24);
+  --shadow-inset: inset 0px 2px 2px rgba(10, 18, 31, 0.04);
+  --shadow-floating: 0px 32px 40px rgba(23, 20, 51, 0.16);
+  --shadow-search: 0px 4px 16px rgba(0, 0, 0, 0.08);
+}
+  /*--------------------------------------------------------------
+  # Insert Section
+  --------------------------------------------------------------*/
+body{
+  background-color: #ecf5ff;
+}
+  section {
+    overflow: hidden;
+  }
+  
+  /* Sections Header
+  --------------------------------*/
+ 
+  .section-header h3 {
+    font-family: "THKD2","Lamoon", "FCFriday", "LayijiMahaniyom Bao";
+    font-size: 2.5rem;
+    color: #283d50;
+    text-align: left;
+    font-weight: 600;
+    position:relative;
+    margin: 3.5rem auto 1.5rem 7rem;
+  }
+
+  .section-header h3::after {
+    content: "";
+  width: 6rem;
+  height: 1px;
+  display: inline-block;
+  background: #283d50;
+  margin: 0.5rem 10px;
+  }
+  
+
+  @media  (max-width: 1199px) and (min-width: 992px) {
+    .section-header h3 {
+      margin-left: 6rem;
+    }
+  }
+  @media  (max-width: 992px) and (min-width: 768px) {
+    .section-header h3 {
+      margin-left: 1rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .section-header h3 {
+        margin-left: 1rem;
+      }
+  }
+
+  /* Section with background
+  --------------------------------*/
+  .section-bg {
+    background: #ecf5ff;
+  }
+  
+
+  
+  /* Services Section
+  --------------------------------*/
+  #services {
+    padding: 60px 0 40px 0;
+    /* box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.1); */
+  }
+  
+  #services .box {
+    padding: 1.875rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 0 0.625rem 1.875rem 0.625rem;
+    background: #fff;
+    box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .link {
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    z-index: 5;
+  }
+  
+  #services .box:hover {
+    transform: translateY(-8px);
+    cursor: pointer;
+  }
+  
+  #services .title {
+    font-family: "THKD2","Lamoon", "FCFriday", "LayijiMahaniyom Bao";
+    font-size: 3rem;
+    margin: auto auto auto 4.5rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--neutral-700)
+  }
+  
+  #services .box:hover h4.title{
+    color: #4facfe;
+  }
+  
+  #services .box:active h4.title {
+    color: #4facfe;
+  }
+  
+  #services img.img-fit {
+    position: absolute;
+    top : calc(100% - 4.8rem);
+    left: 1rem;
+    width: 4rem;
+    height: auto;
+    transition: 0.5s;
+  }
+  #services img.img-re {
+    top : calc(100% - 5.1rem);
+    left: 0.8rem;
+    width: 4.6rem;
+  }
+  #services .box:hover img.img-fit{
+    transform: scale(1.16, 1.16);
+    -webkit-transform: scale(1.16, 1.16);
+  }
+
+  #services .box:active img.img-fit{
+    transform: scale(1.16, 1.16);
+    -webkit-transform: scale(1.16, 1.16);
+  }
+  
+  

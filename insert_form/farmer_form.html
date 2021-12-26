@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information Manangement System">
+    <meta name="author" content="Chandara Sin">
+    <link rel="icon" sizes="192x192" href="assets/images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png">
+    <title>Krabuang Yai Information Management System</title>
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style_insert_form.css">
+</head>
+
+<body>
+    <div class="container-contact100">
+
+        <div class="wrap-contact100">
+            <form method="#" class="contact100-form">
+
+                <span class="contact100-form-title">
+                    เกษตรกรในท้องถิ่น
+                </span>
+
+                <p>ชื่อเกษตรกร</p>
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="fam_name">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <p>ประเภทของการเกษตร</p>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="fam_type" onclick="appear()" id="fam_type1">
+                    <label for="fam_type1" class="radio-label">ปลูกพืช</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="fam_type" onclick="appear()" id="fam_type2">
+                    <label for="fam_type2" class="radio-label">เลี้ยงสัตว์</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="fam_type" onclick="appear()" id="fam_type3">
+                    <label for="fam_type3" class="radio-label">ทำประมง</label>
+                </div>
+
+                <div id="other">
+                    <p class="para-other">โปรดระบุรายการพืช</p>
+                    <div class="wrap-input100 other-div">
+                        <input class="input100" type="text" name="fam_plant">
+                        <span class="focus-input100"></span>
+                    </div>
+                </div>
+
+                <div id="other_animal" style="display: none;">
+                    <p class="para-other">โปรดระบุรายการสัตว์ที่เลี้ยง(ถ้ามี)</p>
+                    <div class="wrap-input100 other-div">
+                        <input class="input100" type="text" name="fam_ani">
+                        <span class="focus-input100"></span>
+                    </div>
+                </div>
+
+                <p>อยู่ในหมู่บ้านที่</p>
+                <div class="box">
+                    <div class="select">
+                        <select id="select_village">
+                            <option>หมู่ที่1 บ้านเตย</option>
+                            <option>หมู่ที่2 บ้านกระเบื้องน้อย</option>
+                            <option>หมู่ที่3 บ้านตำแย</option>
+                            <option>หมู่ที่4 บ้านกระเบื้องใหญ่</option>
+                            <option>หมู่ที่5 บ้านไผ่</option>
+                            <option>หมู่ที่6 บ้านโนนกระสัง</option>
+                            <option>หมู่ที่7 บ้านท่ามะเขือ</option>
+                            <option>หมู่ที่8 บ้านวัด</option>
+                            <option>หมู่ที่9 บ้านโนนทอง</option>
+                            <option>หมู่ที่10 บ้านจบก</option>
+                            <option>หมู่ที่11 บ้านโนนเสว</option>
+                        </select>
+                        <div class="select-arrow"></div>
+                    </div>
+                </div>
+
+                <p>ใช้ระบบ หรือเทคโนโลยีทุ่นแรงหรือไม่</p>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="fam_tech" id="use_tech">
+                    <label for="use_tech" class="radio-label">ใช้</label>
+                </div>
+                <div class="radio-input">
+                    <input class="#" type="radio" name="fam_tech" id="no_tech">
+                    <label for="no_tech" class="radio-label">ไม่ใช้</label>
+                </div>
+
+                <p>ระบบ หรือเทคโนโลยีที่ใช้</p>
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="tech_details">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <p>พื้นที่ในการทำการเกษตร (ไร่)</p>
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="fam_area">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <p>รายได้เฉลี่ยต่อปี (บาท)</p>
+                <div class="wrap-input100">
+                    <input class="input100" type="text" name="fam_income">
+                    <span class="focus-input100"></span>
+                </div>
+
+                <div class="container-contact100-form-btn">
+                    <button class="contact100-form-btn">
+                        บันทึก
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function appear() {
+            let x = document.getElementById("fam_type1");
+            let y = document.getElementById("fam_type2");
+            let w = document.getElementById("other");
+            let b = document.getElementById("other_animal");
+            if (x.checked) {
+                w.style.display = "block";
+                b.style.display = "none";
+            } else if(y.checked) {
+                w.style.display = "none";
+                b.style.display = "block";
+            }else{
+                w.style.display = "none";
+                b.style.display = "none";
+            }
+            
+            // appear();
+        };
+        // function appear_ani() {
+        //     let x = document.getElementById("fam_type1") 
+        //     let w = document.getElementById("other");
+        //     let a = document.getElementById("fam_type2") 
+        //     let b = document.getElementById("other_animal");
+        //     if(a.checked){
+        //         b.style.display = "block";
+        //         w.hide();
+        //     }else{
+        //         b.style.display = "none";
+        //         w.hide();
+        //     }
+        //     // appear_ani();
+        // }
+    </script>
+
+</body>
+
+</html>
